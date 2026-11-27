@@ -39,10 +39,10 @@
 
 9. Sur quels nœuds se trouvent vos 3 réplicas ? Collez la sortie de `kubectl get pods -l app=site -o wide`.
    ```
-NAME                   READY   STATUS    RESTARTS   AGE     IP          NODE               NOMINATED NODE   READINESS GATES
-site-75775484b-gclm9   1/1     Running   0          85s     10.42.1.5   k3d-lab-agent-1    <none>           <none>
-site-75775484b-tpgr5   1/1     Running   0          4m59s   10.42.2.6   k3d-lab-server-0   <none>           <none>
-site-75775484b-vpmx9   1/1     Running   0          85s     10.42.0.8   k3d-lab-agent-0    <none>           <none>
+   NAME                   READY   STATUS    RESTARTS   AGE     IP          NODE               NOMINATED NODE   READINESS GATES
+   site-75775484b-gclm9   1/1     Running   0          85s     10.42.1.5   k3d-lab-agent-1    <none>           <none>
+   site-75775484b-tpgr5   1/1     Running   0          4m59s   10.42.2.6   k3d-lab-server-0   <none>           <none>
+   site-75775484b-vpmx9   1/1     Running   0          85s     10.42.0.8   k3d-lab-agent-0    <none>           <none>
    ```
 10. Avec l'image `nginx:9.99`, quel statut avait le pod ? Quelle commande vous a donné la cause ?
    > Le nouveau pod était en erreur avec le statut ErrImagePull puis ImagePullBackOff : il ne pouvait pas démarrer. La commande `kubectl describe pod <nom-du-pod>` a donné la cause dans la section Events : l'image nginx:9.99 est introuvable car ce tag n'existe pas.
