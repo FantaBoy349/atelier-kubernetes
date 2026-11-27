@@ -63,4 +63,4 @@
 
 ---
 
-**Score obtenu avec `./scripts/check.sh` :** ... / ...
+**Score obtenu avec `./scripts/check.sh` :** 18 / 18
